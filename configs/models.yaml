@@ -1,0 +1,51 @@
+# TCN
+# widths: list of channel sizes for each layer
+# kernel_size: convolution kernel size
+# dropout: dropout rate
+# lr: training learning rate
+# epochs: training epochs
+# batch_size: batch size
+
+tcn:
+  widths: [32, 32, 32]
+  kernel_size: 3
+  dropout: 0.1
+  lr: 1e-3
+  epochs: 20
+  batch_size: 64
+
+# Autoformer
+# d_model: embedding dimension
+# n_heads: attention heads
+# e_layers: encoder layers
+# d_layers: decoder layers
+# moving_avg: window size for series decomposition
+# lr: training learning rate
+# epochs: training epochs
+# batch_size: batch size
+
+autoformer:
+  d_model: 64
+  n_heads: 4
+  e_layers: 2
+  d_layers: 1
+  # Autoformer (paper) extras:
+  # factor: top-k factor for Auto-Correlation time-delay aggregation (k ≈ factor * log(L))
+  # d_ff: feed-forward hidden size (defaults to 4*d_model if omitted)
+  # label_len: decoder warm-start length (defaults to seq_len//2 if omitted)
+  factor: 3.0
+  moving_avg: 25
+  dropout: 0.1
+  lr: 1e-3
+  epochs: 5
+  batch_size: 64
+
+gpt4ts:
+  pretrained_name_or_path: "checkpoints/gpt2"
+  gpt_layers: 2
+  d_model: 768
+  patch_size: 16
+  stride: 8
+  lr: 1e-4
+  epochs: 20
+  batch_size: 64

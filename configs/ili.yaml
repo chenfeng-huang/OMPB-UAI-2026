@@ -1,0 +1,22 @@
+ili:
+  data:
+    train_path: "dataset/ILI_train.csv"
+    test_path: "dataset/ILI_test.csv"
+    # Train/val/test split is defined here and used as-is by the scripts.
+    split:
+      train: 0.8
+      val: 0.0
+      test: 0.2
+    align_columns: "train"
+  window:
+    seq_len: 24
+    pred_len: 24
+  scaling:
+    scaler_path: "dataset/ili_scaler.joblib"
+    impute_nan: true
+
+ompb:
+  seq_len: 24
+  pred_len: 24
+  prefetch_target: 1
+

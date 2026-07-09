@@ -1,0 +1,17 @@
+# Core
+numpy>=1.23,<3
+pandas>=1.5,<3
+
+# ML / Deep Learning
+torch>=2.0,<3
+scikit-learn>=1.2,<2
+
+# Utilities
+joblib>=1.2,<2
+PyYAML>=6.0,<7
+tqdm>=4.66,<5
+matplotlib>=3.8,<4
+
+# GPT4TS backbone
+transformers>=4.40,<5
+einops>=0.7,<1

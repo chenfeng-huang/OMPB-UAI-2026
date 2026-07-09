@@ -1,0 +1,27 @@
+weather:
+  data:
+    train_path: "dataset/Weather_train.csv"
+    test_close_path: "dataset/Weather_test_close.csv"
+    test_far_path: "dataset/Weather_test_far.csv"
+    split:
+      train: 0.9
+      val: 0.0
+      test: 0.1
+    align_columns: "strict"
+  window:
+    seq_len: 96
+    pred_len: 24
+  scaling:
+    scaler_path: "dataset/weather_scaler.joblib"
+    impute_nan: true
+
+ompb:
+  seq_len: 96
+  pred_len: 24
+  prefetch_target: 1
+
+
+ompb:
+  seq_len: 96
+  pred_len: 96
+  prefetch_target: 1

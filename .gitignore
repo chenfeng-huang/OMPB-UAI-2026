@@ -1,0 +1,13 @@
+# Checkpoints / model weights
+checkpoints/
+
+# Dataset files (download from Google Drive; see README)
+dataset/*
+!dataset/.gitkeep
+
+outputs/
+
+
+__pycache__/
+*.pyc
+outputs*/

@@ -1,0 +1,13 @@
+data:
+  etth1_path: "dataset/ETTh1.csv"
+  etth2_path: "dataset/ETTh2.csv"
+  split:
+    train: 0.8
+    val: 0.0
+    test: 0.2
+window:
+  seq_len: 96
+  pred_len: 96
+scaling:
+  standardize: true
+  scaler_path: "dataset/ett_scaler.joblib"
